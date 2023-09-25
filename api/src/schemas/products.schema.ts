@@ -18,7 +18,7 @@ export class Product {
   imageUrl: string;
 
   @Prop()
-  sale?: number
+  sale?: number;
 
   @Prop({ type: [{ type: Types.ObjectId, ref: Category.name }] })
   category: Category;

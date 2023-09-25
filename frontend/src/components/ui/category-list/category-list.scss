@@ -1,5 +1,17 @@
+@use '../../../styles/media';
+
 .category-list {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+
+  @include media.media(media.$md) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include media.media(media.$sm) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

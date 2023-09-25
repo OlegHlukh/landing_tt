@@ -1,0 +1,13 @@
+@use "../../../../../styles/media";
+
+.burger-menu {
+  display: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include media.media(media.$md) {
+    display: block;
+  }
+}

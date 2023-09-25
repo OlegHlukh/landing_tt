@@ -8,19 +8,27 @@ import { CategoryService } from '../category/category.service';
 import { CategoryModule } from '../category/category.module';
 
 @Module({
-  imports: [MongooseModule.forFeature([{
-    name: Product.name, schema: ProductSchema
-  }, {
-    name: Category.name, schema: CategorySchema
-  }]),
+  imports: [
+    MongooseModule.forFeature([
+      {
+        name: Product.name,
+        schema: ProductSchema,
+      },
+      {
+        name: Category.name,
+        schema: CategorySchema,
+      },
+    ]),
     CategoryModule,
   ],
   providers: [ProductsService],
-  controllers: [ProductsController]
+  controllers: [ProductsController],
 })
-
 export class ProductsModule implements OnModuleInit {
-  constructor(private productService: ProductsService, private categoryService: CategoryService) {}
+  constructor(
+    private productService: ProductsService,
+    private categoryService: CategoryService,
+  ) {}
 
   async onModuleInit() {
     await this.categoryService.seed();

@@ -1,6 +1,6 @@
 export class GetProductDto {
   q?: string;
-  limit?: number
+  limit?: number;
   offset?: number;
   category?: string;
 }

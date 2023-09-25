@@ -11,6 +11,7 @@ import IconButton from '@/components/ui/icon-button/icon-button';
 import personIconSrc from '@/assets/person.svg';
 import pugIconSrc from '@/assets/bag.svg';
 import Search from '@/components/layout/header/components/search';
+import BurgerMenu from "@/components/layout/header/components/burger-menu/burger-menu";
 
 export const Header: FC = () => {
   const t = useTranslations('header');
@@ -19,6 +20,7 @@ export const Header: FC = () => {
     <header className={'header'}>
       <Container>
         <nav className={'header__nav'}>
+          <BurgerMenu />
           <div>
             <ul className={'header__items'}>
               {headerNavLinks.map((el, index) => (

@@ -1,6 +1,17 @@
+@use '../../../styles/media';
+
 .productList {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
+
+  @include media.media(media.$lg) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center
+  }
+
+  @include media.media(media.$md) {
+    grid-template-columns: 1fr;
+  }
 }

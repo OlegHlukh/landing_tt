@@ -1,18 +1,23 @@
+@use '../../../styles/media';
+@use '../../../styles/variables';
+
 .text-decorator-left {
 
   height: 60px;
-
   width: 193px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
   background-image: url("../../../../public/bg-image/left.png");
+
+  @include media.media(media.$lg) {
+    height: 40px;
+    width: 125px;
+  }
 }
 
 .text-decorator-right {
-
-
   width: 153px;
   height: 60px;
 
@@ -21,33 +26,57 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include media.media(media.$lg) {
+    height: 40px;
+    width: 100px;
+  }
 }
 
 .home-hero {
-  //margin-top: 70px;
-
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+
+  @include media.media(media.$lg) {
+    margin-top: 8rem;
+  }
+
+  @include media.media(media.$md) {
+    grid-template-columns: 1fr;
+  }
 
   &__image-container {
     position: relative;
     height: 680px;
     z-index: 0;
     //width: 680px;
+
+    @include media.media(media.$lg) {
+      height: 400px;
+    }
+
+    @include media.media(media.$md) {
+      display: none;
+    }
+
   }
 
   &__title-container {
     display: grid;
     justify-items: flex-start;
-    gap: 4.8rem;
+    gap: 4.8em;
+
+    @include media.media(media.$md) {
+      justify-items: center;
+    }
   }
 
   &__title {
-    font-size: 4.8rem;
+    font-size: clamp(2.8rem, 4vw, 4.8rem);
     display: grid;
-    gap: 2.4rem;
+    gap: .6em;
   }
 
   &__row {
@@ -62,6 +91,11 @@
   &__description {
     font-size: 1.6rem;
     max-width: 52rem;
+    color: variables.$text-color-secondary;
+
+    @include media.media(media.$md) {
+      text-align: center;
+    }
   }
 
 }

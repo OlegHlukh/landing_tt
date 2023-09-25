@@ -21,10 +21,6 @@ export const NavLink: FC<NavLinkProps> = ({
 
   const isActive = path === href;
 
-  console.log(path, href);
-
-  console.log(isActive, activeClassName);
-
   return (
     <Link className={isActive ? activeClassName : ''} href={href} {...rest}>
       {label}

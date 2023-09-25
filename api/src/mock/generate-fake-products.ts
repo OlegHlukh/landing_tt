@@ -3,90 +3,90 @@ import { CreateProductDto } from '../products/dto/create-product.dto';
 export const generateFakeProducts = () => {
   const seedProducts: CreateProductDto[] = [
     {
-      name: "IPhone 15 pro",
+      name: 'IPhone 15 pro',
       price: 'from 1000 $',
       imageUrl: 'apple-15.jpg',
-      category: 'IPhone'
+      category: 'IPhone',
     },
     {
-      name: "IPhone 14 pro",
+      name: 'IPhone 14 pro',
       price: 'from 900 $',
       imageUrl: 'iPhone-14-pro.jpg',
-      category: 'IPhone'
+      category: 'IPhone',
     },
     {
-      name: "IPhone 15 pro",
+      name: 'IPhone 15 pro',
       price: 'from 900 $',
       imageUrl: 'apple-15.jpg',
-      category: 'IPhone'
+      category: 'IPhone',
     },
     {
-      name: "IPhone 14 pro",
+      name: 'IPhone 14 pro',
       price: 'from 900 $',
       imageUrl: '',
-      category: 'IPhone'
+      category: 'IPhone',
     },
     {
-      name: "IPhone 15 pro",
+      name: 'IPhone 15 pro',
       price: 'from 1200 $',
       imageUrl: 'apple-15.jpg',
-      category: 'IPhone'
+      category: 'IPhone',
     },
     {
-      name: "IPhone 14 pro",
+      name: 'IPhone 14 pro',
       price: 'from 900 $',
       imageUrl: '',
-      category: 'IPhone'
+      category: 'IPhone',
     },
     {
-      name: "IPhone 14 pro",
+      name: 'IPhone 14 pro',
       price: 'from 900 $',
       imageUrl: '',
-      category: 'IPhone'
+      category: 'IPhone',
     },
     {
-      name: "IPhone 14 pro",
+      name: 'IPhone 14 pro',
       price: 'from 900 $',
       imageUrl: '',
-      category: 'IPhone'
+      category: 'IPhone',
     },
     {
-      name: "Watch",
+      name: 'Watch',
       price: 'from 900 $',
       imageUrl: '',
-      category: 'Watch'
+      category: 'Watch',
     },
     {
-      name: "iPad",
+      name: 'iPad',
       price: 'from 900 $',
       imageUrl: '',
-      category: 'iPad'
+      category: 'iPad',
     },
     {
-      name: "Mac",
+      name: 'Mac',
       price: 'from 900 $',
       imageUrl: '',
-      category: 'Mac'
+      category: 'Mac',
     },
     {
-      name: "Vision",
+      name: 'Vision',
       price: 'from 900 $',
       imageUrl: '',
-      category: 'Vision'
+      category: 'Vision',
     },
     {
-      name: "Tv & home",
+      name: 'Tv & home',
       price: 'from 900 $',
       imageUrl: '',
-      category: 'Tv & home'
+      category: 'Tv & home',
     },
     {
-      name: "Entertainment",
+      name: 'Entertainment',
       price: 'from 900 $',
       imageUrl: '',
-      category: 'Entertainment'
+      category: 'Entertainment',
     },
-  ]
+  ];
 
   return seedProducts;
-}
+};

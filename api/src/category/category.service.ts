@@ -1,4 +1,4 @@
-import { Injectable, } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Category, CategoryDocument } from '../schemas/category.schema';
 import { Model } from 'mongoose';
@@ -15,7 +15,7 @@ export class CategoryService {
   }
 
   async findByName(name: string): Promise<CategoryDocument> {
-    return this.categoryModel.findOne({name}).exec()
+    return this.categoryModel.findOne({ name }).exec();
   }
 
   async createCategory(category: Category): Promise<Category> {
@@ -24,18 +24,16 @@ export class CategoryService {
     return newCategory.save();
   }
 
-  async seed () {
+  async seed() {
     const categories = await this.findAll();
-
-    console.log(categories);
 
     if (categories.length) {
       return;
     }
 
-    const seedCategories = generateFakeCategories()
+    const seedCategories = generateFakeCategories();
 
-    const promises = seedCategories.map(el => this.createCategory(el))
+    const promises = seedCategories.map((el) => this.createCategory(el));
 
     await Promise.all(promises);
   }

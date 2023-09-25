@@ -1,10 +1,15 @@
 @use '../../../styles/mixins';
 @use '../../../styles/variables';
+@use '../../../styles/media';
 
 .product-section {
 
   &__bg {
     @include mixins.sectionBgImage(303px);
+
+    @include media.media(media.$md) {
+      @include mixins.sectionBgImage(400px);
+    }
   }
 
   &__title {
@@ -17,5 +22,10 @@
   &__list {
     position: relative;
     top: -80px;
+
+    @include media.media(media.$sm) {
+      top: -30px;
+    }
+
   }
 }

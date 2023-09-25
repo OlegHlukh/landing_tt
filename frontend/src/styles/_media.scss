@@ -5,7 +5,13 @@ $lg: 1024px;
 $xlg: 1300px;
 
 @mixin media($breakpoint) {
-  @media only screen and (min-width: $breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-up($breakpoint) {
+  @media only screen and (min-width: $breakpoint + 1) {
     @content;
   }
 }

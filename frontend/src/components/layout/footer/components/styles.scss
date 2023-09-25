@@ -1,4 +1,5 @@
 @use '../../../../styles/variables';
+@use '../../../../styles/media';
 
 .copyrights {
   padding: 5rem 0;
@@ -8,17 +9,32 @@
   justify-content: space-between;
   color: variables.$text-color-secondary;
 
+  @include media.media(media.$lg) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   &__nav {
     display: flex;
-
     font-size: 1.4rem;
 
+    @include media.media(media.$md) {
+      flex-direction: column;
+    }
   }
 
   &__nav-items {
     padding-inline: 16px;
 
     border-right: 1px solid variables.$text-color-secondary;
+
+    @include media.media(media.$md) {
+      border-right: none;
+      padding-inline: 0;
+      padding-block: 10px;
+
+      text-align: center;
+    }
 
     &:last-child {
       border-right: none;

@@ -1,3 +1,5 @@
+@use '../../../styles/media';
+
 .tv-section {
   & h2 {
     visibility: hidden;
@@ -8,5 +10,9 @@
     width: 100%;
     gap: 24px;
     justify-content: center;
+
+    @include media.media(media.$md) {
+      flex-direction: column;
+    }
   }
 }
