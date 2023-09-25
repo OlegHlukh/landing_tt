@@ -1,0 +1,12 @@
+.tv-section {
+  & h2 {
+    visibility: hidden;
+  }
+
+  &__list {
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,35 @@
+@use '../../../styles/mixins';
+
+.header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+  &__nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.4rem;
+  }
+
+  &__items {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__nav-link {
+    padding: 1rem;
+  }
+
+  &__nav-link_isActive {
+    font-weight: 600;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}

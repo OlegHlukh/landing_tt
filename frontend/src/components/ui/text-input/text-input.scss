@@ -1,0 +1,36 @@
+@use '../../../styles/variables';
+
+.input-container {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  border-radius: 12px;
+  border: 1px solid #FFF;
+  background: rgba(255, 255, 255, 0.36);
+  backdrop-filter: blur(8px);
+
+  &__icon {
+    width: 24px;
+    aspect-ratio: 1;
+  }
+
+  &__input {
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    padding-block: 10px;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+
+    }
+
+    &::placeholder {
+      color: variables.$text-color-primary;
+    }
+  }
+}

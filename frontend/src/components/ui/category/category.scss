@@ -1,0 +1,26 @@
+@use '../../../styles/variables';
+
+.category {
+  display: flex;
+  height: 48px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.6rem;
+
+  border-radius: 36px;
+  border: 1px solid #464646;
+  box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.16);
+
+  background-color: transparent;
+
+  &-isActive {
+    color: #E8E8E8;
+    background: variables.$button-bg-color-primary;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

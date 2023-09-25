@@ -1,0 +1,135 @@
+@use "../../../styles/variables";
+
+@mixin activeTitle () {
+  background-color: #fff;
+  border-bottom-right-radius: variables.$basic-border-radius;
+  padding: 10px 16px 10px;
+}
+
+@mixin before ($with, $color) {
+  content: "";
+  position: absolute;
+  width: calc($with + 1px);
+  aspect-ratio: 1;
+  background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent  $with,
+      $color calc($with + 1px)
+  );
+  rotate: -90deg;
+  bottom: 1px;
+}
+
+$wale-width: 20px;
+
+.tv-show {
+  position: relative;
+
+  height: 48rem;
+
+  min-width: 8.8rem;
+  border-radius: variables.$basic-border-radius;
+  overflow: hidden;
+
+  transition: all 400ms ease-in;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-isActive {
+    flex-grow: 5;
+    cursor: inherit;
+  }
+
+  &__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2rem;
+    writing-mode: vertical-rl;
+    z-index: 5;
+  }
+
+  &__blur {
+    backdrop-filter: blur(.4rem);
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  &__active-container {
+    position: relative;
+    height: 100%;
+    z-index: 5;
+    display: grid;
+    align-content: space-between;
+    justify-items: start
+  }
+
+  &__button {
+    $padding: 6px;
+    padding: $padding 0 0 $padding;
+    background-color: #fff;
+    justify-self: end;
+    position: relative;
+    border-top-left-radius: variables.$basic-border-radius;
+
+    &::before {
+      @include before($wale-width, #fff);
+      left: - $wale-width;
+      transform: rotate(-90deg);
+      bottom: -1px;
+    }
+
+    &::after {
+      @include before($wale-width, #fff);
+      right: 0;
+      top: - $wale-width;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__active-header {
+    display: grid;
+    justify-items: start;
+  }
+
+  &__active-name {
+    @include activeTitle();
+    font-size: 2.4rem;
+    position: relative;
+
+    &::before {
+      @include before($wale-width, white);
+      z-index: 5;
+      right: -$wale-width;
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__genre {
+    @include activeTitle();
+    font-size: 1.6rem;
+    position: relative;
+
+    &::before {
+      @include before($wale-width, #fff);
+      z-index: 5;
+      right: -$wale-width;
+      top: 0;
+      transform: rotate(90deg);
+    }
+
+    &::after {
+      @include before($wale-width, #fff);
+      z-index: 5;
+      left: 0;
+      bottom: - $wale-width;
+      transform: rotate(90deg);
+    }
+  }
+}

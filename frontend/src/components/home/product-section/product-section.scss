@@ -1,0 +1,21 @@
+@use '../../../styles/mixins';
+@use '../../../styles/variables';
+
+.product-section {
+
+  &__bg {
+    @include mixins.sectionBgImage(303px);
+  }
+
+  &__title {
+    padding-top: 48px;
+    display: grid;
+    justify-items: center;
+    gap: 24px;
+  }
+
+  &__list {
+    position: relative;
+    top: -80px;
+  }
+}

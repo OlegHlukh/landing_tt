@@ -1,0 +1,24 @@
+@use "../../../styles/variables";
+
+.button {
+  display: flex;
+  height: 48px;
+  padding: 0 24px;
+  border: 1px solid #fff;
+  border-radius: variables.$basic-border-radius;
+
+  align-items: center;
+  justify-content: center;
+  background: variables.$button-bg-color-primary;
+  box-shadow: variables.$button-box-shadow;
+  color: variables.$button-text-color;
+  transition: all ease-in-out 300ms;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    border-color: variables.$text-color-primary;
+    color:  variables.$text-color-primary;
+    background: #fff;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin flex($justifyContent, $gap) {
+  display: flex;
+  justify-content: $justifyContent;
+  gap: $gap
+}
+
+@mixin sectionBgImage($height) {
+  height: $height;
+  background-image:  linear-gradient(0deg, #F2F2F2 -4.55%, rgba(242, 242, 242, 0.5) 228.03%), url('../assets/bg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,19 @@
+@use '../../../styles/variables';
+
+.icon-button {
+  width: 48px;
+  height: 48px;
+
+  border-radius: variables.$basic-border-radius;
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #FFF;
+  background: rgba(255, 255, 255, 0.36);
+  backdrop-filter: blur(8px);
+
+  &__image {
+    width: 24px;
+    aspect-ratio: 1;
+  }
+}
